@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Mart</title>
+    <link rel="stylesheet" href="./assets/stylesheets/mycart.css">
+    <script src="https://kit.fontawesome.com/2f44437034.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!--  Top Bar  -->
+        <div id="topbar">
+            <div class="container">
+                <div class="row justify-between">
+                    <div class="col col-1">
+                        <span>WELCOME TO OUR SHOP!</span>
+                    </div>
+                    <div class="user_name">
+                        <span id="user_name"></span>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!--  Header  -->
+        <header id="header">
+            <div class="container">
+                <div class="row justify-between align-center">
+                    <div class="col logo">
+                        <h1>
+                            <a href="index.html">
+                                <span>E</span>lectronics <span>M</span>art
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col search">
+                            <input type="text" name="" id="product_name" placeholder="Search for products, brands and more">
+                            <button type="submit" onclick="view_by_name()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        
+                    </div>
+                    <div class="col user-links">
+                        <ul class="row justify-between">
+                            <li>
+                                <a id="interest" onclick="view_by_interest()">
+                                    <i class="far fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="cart" onclick="view_my_cart()">
+                                    <i class="fas fa-shopping-cart"></i> Cart
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+        </header>
+        <!--  NavBar  -->
+        <div id="navbar">
+            <div class="container">
+                <div class="row justify-between align-center">
+                    <div class="all-categories">
+                        <select id="switch_category">
+                            <option value="">Categories</option>
+                            <option value="television">Phone</option>
+                            <option value="earphones">Headphones</option>
+                            <option value="computer">Computers</option>
+                            <option value="shoes">Sport Shoes</option>
+                            <option value="camera">Camera & Accessories</option>
+                            <option value="game">Game Zone</option>
+                        </select>
+                    </div>    
+                        <nav id="main-navigation">
+                            <input type="checkbox" value="toggle-menu">
+                            <button class="menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            
+                            <ul class="row justify-between">
+                                <li class="">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="electronics.html">Electronics</a>
+                                    <div class="dropdown-menu">
+                                        <h2>Mobiles, Computers</h2>
+                                        <ul>
+                                            <li><a onclick="phone()">All Mobile Phones</a></li>
+                                            <li><a  onclick="Cover_screen()">Covers & Screen Protectors</a></li>
+                                            <li><a  onclick="power_bank()">Power Banks</a></li>
+                                            <li><a  onclick="tablet()">Tablets</a></li>
+                                            <li><a  onclick="headphone_earphone()">Headphones & Earphones</a></li>
+                                            <li><a  onclick="smart_home()">Smart Home</a></li>
+                                            <li><a  onclick="laptop()">Laptops</a></li>
+                                            <li><a  onclick="computer_accessories()">Computer Accessories</a></li>
+                                            <li><a  onclick="game_zone()">Game Zone & Software</a></li>
+                                            <li><a  onclick="watch()">Smart Watches</a></li>
+                                            <li><a ></a></li>
+                                            <li><a ></a></li>
+                                            <li><a ></a></li>
+                                            <li><a ></a></li>                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="appliances.html">Appliances</a>
+                                    <div class="dropdown-menu">
+                                        <h2>Tv, Appliances, Electronics</h2>
+                                        <ul>
+                                            <li><a  onclick="television()">Telivisions</a></li>
+                                            <li><a  onclick="speaker()">Speakers</a></li>
+                                            <li><a  onclick="camera()">Cameras & DSLR</a></li>
+                                            <li><a  onclick="game()">Gaming Consoles</a></li>
+                                            <li><a  onclick="AC()">Air Conditioners</a></li>
+                                            <li><a  onclick="heater()">Heaters</a></li>
+                                            <li><a  onclick="refrigerator()">Refrigerators</a></li>
+                                            <li><a  onclick="washing_machine()">Washing Machine</a></li>                                   
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="sports.html">Sports</a>
+                                    <div class="dropdown-menu">
+                                        <h2> Sports & Fitness</h2>
+                                        <ul>
+                                            <li><a  onclick="cricket()">Cricket</a></li>
+                                            <li><a  onclick="badminton()">Badminton</a></li>
+                                            <li><a  onclick="cycling()">Cycling</a></li>
+                                            <li><a  onclick="football()">Football</a></li>
+                                            <li><a  onclick="gym()">Gym Equipments</a></li>
+                                            <li><a  onclick="shoes()">Sports Shoes</a></li> 
+                                            <li><a ></a></li>
+                                            <li><a ></a></li>                    
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="new_arrival.html">New Arrival</a>
+                                </li>
+                                <li>
+                                    <a href="about_us.html">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                </div>
+            </div>
+        </div>
+        <!--  Banner  -->
+        
+        <!--  Content  -->
+        <div id="content">
+            <div class="cart">
+                <h1>
+                <span>M</span>y <span>C</span>art
+                </h1>
+                <a >Remove all</a>
+                <div class="my_cart container">
+                    <div class="item row">
+                        <div class="image">
+                            <img src="data:image/png;base64,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" alt="">
+                        </div>
+                        <div class="name_price">
+                            <h2><span>sample name</span></h2>
+                            <h3>$123</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="extra" class="row align-center">
+                    <div class="extra row justify-around">
+                            <div class="colmn col-1 row">
+                                <div class="text">
+                                    <span>New Collections, New Trendy</span>
+                                    <br>
+                                    <p>Smart Watches</p>    
+                                    <br>
+                                    <span>Sale Upto 25% off in all store</span>
+                                </div>
+                                <div class="image">
+                                    <img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/off1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="colmn col-2 row">
+                                <div class="text">
+                                    <span>Top Brands, Lowest Prices</span>
+                                    <br>
+                                    <p>Smart Phones</p>    
+                                    <br>
+                                    <span>Free shipping order over ₹1000</span>
+                                </div>
+                                <div class="image">
+                                    <img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/off2.png" alt="">
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="container">
+                <div id="electronics">
+                    <h3>
+                        Electronics :
+                    </h3>
+                    <p>
+                        If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.
+                    </p>
+                    <div class="features row justify-around">
+                        <div class="feature row">
+                            <i class="fas fa-dolly fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Free Shipping
+                                </h4>
+                                <span>
+                                    on orders over ₹1000
+                                </span>
+                            </div>
+                        </div>
+                        <div class="feature row">
+                            <i class="fas fa-shipping-fast fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Fast Delivery
+                                </h4>
+                                <span>
+                                    World Wide
+                                </span>
+                            </div>
+                        </div>
+                        <div class="feature row">
+                            <i class="far fa-thumbs-up fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Big Choice
+                                </h4>
+                                <span>
+                                    on Products
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="usefull">
+                    <div class="usefull">
+                        <div class="row justify-between">
+                            <div class="links categories">
+                                <div class="column">
+                                    <h3>Categories</h3>
+                                    <a onclick="phone()">Mobiles</a>
+                                    <a onclick="computer_accessories()">Computers</a>
+                                    <a onclick="television()">Tv, Audio</a>
+                                    <a onclick="camera()">Cameras</a>
+                                    <a onclick="game()">Game Zone</a>
+                                    <a onclick="refrigerator()">Refrigerators</a>
+                                </div>
+                            </div>
+                            <div class="links quicklinks">
+                                <div class="column">
+                                    <h3>Quick Links</h3>
+                                    <a href="about_us.html">About Us</a>
+                                    <a href="about_us.html">Contact Us</a>
+                                    <a href="">Help</a>
+                                    <a href="">Faqs</a>
+                                    <a href="">Terms of Use</a>
+                                    <a href="">Privacy Policy</a>
+                                </div>
+                            </div>
+                            <div class="links getintouch">
+                                <div class="column">
+                                    <h3>Get in Touch</h3>
+                                    <a href="https://goo.gl/maps/cb6tW317gJGVn3gM9">
+                                        <i class="fas fa-map-marker"></i>
+                                        <span>Delhi, India</span>
+                                    </a>
+                                    <a >
+                                        <i class="fas fa-mobile"></i>
+                                        <span>12 2345 6790</span>
+                                    </a>
+                                    <a >
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>+11 3672 1890</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <span>electronicsmartapi@gmail.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="newsletter">
+                                <div class="column">
+                                    <h3>News Letter</h3>
+                                    <a >
+                                        <span>Free Delivery on your first order!</span>
+                                    </a>
+                                    <div class="row email">
+                                        <input id="email_news" type="text" placeholder="Email">
+                                        <div class="send">
+                                            <a onclick="send_news()">
+                                                <i class="fab fa-telegram-plane fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="follow">
+                                        <span>Follow Us on</span>
+                                        <div class="row">
+                                            <a href="https://www.facebook.com/login.php" class="facebook icon dblue">
+                                                <i class="fab fa-facebook-square fa-lg"></i>
+                                            </a>
+                                            <a href="https://twitter.com/?lang=en-in" class="twitter icon lblue">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                            <a href="https://mail.google.com" class="google icon red">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container">
+                    <div class="applainces">
+                        
+                        <div class="mobile applaince">
+                            <h3>
+                                Payment Methods
+                            </h3>
+                            <div class="text">
+                                <ul class="row">
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay2.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay5.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay1.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay4.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay6.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay3.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay7.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay8.png" alt=""></li>
+                                </ul>
+                            </div>
+                    </div>
+                
+            </div>
+        </div>    
+        <!--  Footer  -->
+        <footer>
+            <div class="row justify-center" id="footer">
+                <p>© 2022 Electronics Mart. All rights reserved | Design by </p><a href="https://www.linkedin.com/in/mohit-malik-b433311ba/">&nbspMohit&nbsp</a><a href="https://www.linkedin.com/in/namit-k-a94373123/">&nbspNamit&nbsp</a><a href="https://www.linkedin.com/in/manish-343586166/">&nbspManish&nbsp</a><a href="https://www.linkedin.com/in/radhika-mongia-a892ba1a0">&nbspRadhika&nbsp</a>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/javascripts/mycart.js"></script>
+</body>
+</html>

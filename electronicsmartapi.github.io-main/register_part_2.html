@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/stylesheets/address_input.css">
+	<script src="./assets/javascripts/register.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<div class="form">
+				<h1>Enter Address</h1>
+				<hr>
+				<input id="houseno" type="text" placeholder="House No." required />
+				<input id="landmark" type="text" placeholder="Landmark" required />
+				<input id="city" type="text" placeholder="City" required />
+				<input id="state" type="text" placeholder="State" required />
+				<input id="pincode" type="number" placeholder="Pincode" required />
+				<hr>
+				<button onclick="register_part_2()">Register</button>
+			</div>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1 id="i">INTEREST </h1>
+					<hr>
+					<div class="flex">
+						<button value="Smart Home" class="b" id="i1" onclick="setColor('i1')">Smart Home</button>
+						<button value="Television" class="b" id="i2" onclick="setColor('i2')">Television</button>
+					</div>
+					<div class="flex">
+						<button value="Cameras" class="b" id="i3" onclick="setColor('i3')">Cameras </button>
+						<button value="Sports Shoes" class="b" id="i4" onclick="setColor('i4')">Sports Shoes</button>
+					</div>
+
+					<div class="flex">
+						<button value="Game Zone" class="b" id="i5" onclick="setColor('i5')">Game Zone</button>
+						<button value="Cycling" class="b" id="i6" onclick="setColor('i6')">Cycling</button>
+					</div>
+					<div class="flex">
+						<button value="Laptops" class="b" id="i7" onclick="setColor('i7')">Laptops</button>
+						<button value="Heaters" class="b" id="i8" onclick="setColor('i8')">Heaters</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

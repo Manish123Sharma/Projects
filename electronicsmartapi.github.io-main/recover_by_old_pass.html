@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/stylesheets/login_register.css">
+    <script src="./assets/javascripts/recover_by_old_pass.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<div class="form">
+			<h1 id="login">Recover Account</h1>
+			<input id="old_pass" type="password" placeholder="Enter an Old Password" required />
+			<input id="pwd" type="password" placeholder="New Password" required />
+            <input id="confirm_pwd" type="password" placeholder="Confirm Password" required />
+            <br>
+			<button onclick="set_new_pass()">Set New Password</button>
+        </div>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+                <div class="login">
+                    <h1>Security Tips!</h1>
+                    <br>
+                    <p>Never use personal information.</p>
+                    <p>Prioritize password length.</p>
+                    <p>Never repeat passwords.</p>
+                    <p>Avoid using real words.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	
+</footer>
+</body>
+</html>

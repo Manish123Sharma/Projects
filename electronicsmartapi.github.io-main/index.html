@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Mart</title>
+    <link rel="stylesheet" href="assets/stylesheets/index.css">
+    <script src="https://kit.fontawesome.com/2f44437034.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!--  Top Bar  -->
+        <div id="topbar">
+            <div class="container">
+                <div class="row justify-between">
+                    <div class="col col-1">
+                        <span>WELCOME TO OUR SHOP!</span>
+                    </div>
+                    <div class="col col-2 login" id="login">
+                        <ul class="row">
+                            <li>
+                                <a href="login.html">
+                                    <i class="fas fa-sign-in-alt"><span> Login</span></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register_part_1.html">
+                                    <i class="fas fa-sign-in-alt"><span> Register</span></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col col-2 user" id="user">
+                        <div class="user_name" id="name" onclick="drop()">
+                        </div>
+                        <div class="drop" id="drop">
+                            <div class="user">
+                                <a href="">My Account</a>
+                            </div>
+                            <div class="user" id="orders">
+                                <a href="">Orders</a>
+                            </div>
+                            <div class="user" id="logout">
+                                <a onclick="logout()">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!--  Header  -->
+        <header id="header">
+            <div class="container">
+                <div class="row justify-around align-center">
+                    <div class="col logo responsive1200">
+                        <h1>
+                            <a href="index.html">
+                                <span>E</span>lectronics <span>M</span>art
+                            </a>
+                        </h1>
+                    </div>
+                    
+                        <div class="col search responsive1200">
+                            <input type="text" name="" id="product_name" placeholder="Search for products, brands and more">
+                            <button type="submit" onclick="view_by_name()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                    </div>
+                    <div class="col user-links responsive1200">
+                        <ul class="row justify-between">
+                            <li>
+                                <a onclick="my_fav()">
+                                    <i id="favs" class="far fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="my_cart()" class="row">
+                                    <i class="fas fa-shopping-cart"></i> &nbsp Cart
+                                </a>
+                            </li>
+                        </ul>
+                    
+                    </div>
+                    <div class="responsive">
+                        <div class="row justify-between">
+                            <div class="col logo">
+                                <h1>
+                                    <a href="index.html">
+                                        <span>E</span>lectronics <span>M</span>art
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="col user-links">
+                                <ul class="row justify-between">
+                                    <li>
+                                        <a onclick="my_fav()">
+                                            <i id="favs" class="far fa-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onclick="my_cart()" class="row">
+                                            <i class="fas fa-shopping-cart"></i> Cart
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col search">
+                            <input type="text" name="" id="product_name" placeholder="Search for products, brands and more">
+                            <button type="submit" onclick="view_by_name()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                    </div>
+                    </div>
+                </div>    
+            </div>
+        </header>
+        <!--  NavBar  -->
+        <div id="navbar">
+            <div class="container">
+                <div class="row justify-between align-center">
+                    <div class="all-categories">
+                        <select id="switch_category">
+                            <option value="">Categories</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Headphone">Headphones</option>
+                            <option value="computer">Computers</option>
+                            <!-- <option value="shoes">Sport Shoes</option> -->
+                            <option value="Camera">Camera & Accessories</option>
+                            <option value="Game Zone">Game Zone</option>
+                        </select>
+                    </div>    
+                        <nav id="main-navigation">
+                            <input type="checkbox" value="toggle-menu">
+                            <button class="menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            
+                            <ul class="row justify-between">
+                                <li class="active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="electronics.html">Electronics</a>
+                                    <div class="dropdown-menu">
+                                        <h2>Mobiles, Computers</h2>
+                                        <ul>
+                                            <li><a  onclick="switch_categories('Phone')">All Mobile Phones</a></li>
+                                            <li><a  onclick="switch_categories('Phone Cover')">Covers & Screen Protectors</a></li>
+                                            <li><a  onclick="switch_categories('Power Bank')">Power Banks</a></li>
+                                            <li><a  onclick="switch_categories('Tablet')">Tablets</a></li>
+                                            <li><a  onclick="switch_categories('Headphone')">Headphones & Earphones</a></li>
+                                            <li><a  onclick="switch_categories('smart home')">Smart Home</a></li>
+                                            <li><a  onclick="switch_categories('Laptop')">Laptops</a></li>
+                                            <li><a  onclick="switch_categories('computer')">Computer Accessories</a></li>
+                                            <li><a  onclick="switch_categories('Game Zone')">Game Zone & Software</a></li>
+                                            <li><a  onclick="switch_categories('SmartWatch')">Smart Watches</a></li>
+                                            <li id="display_none"><a ></a></li>
+                                            <li id="display_none"><a ></a></li>
+                                            <li id="display_none"><a ></a></li>
+                                            <li id="display_none"><a ></a></li>                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="appliances.html">Appliances</a>
+                                    <div class="dropdown-menu">
+                                        <h2>Tv, Appliances, Electronics</h2>
+                                        <ul>
+                                            <li><a  onclick="switch_categories('television')">Telivisions</a></li>
+                                            <li><a  onclick="switch_categories('speaker')">Speakers</a></li>
+                                            <li><a  onclick="switch_categories('camera')">Cameras & DSLR</a></li>
+                                            <li><a  onclick="switch_categories('console')">Gaming Consoles</a></li>
+                                            <li><a  onclick="switch_categories('AC')">Air Conditioners</a></li>
+                                            <li><a  onclick="switch_categories('heater')">Heaters</a></li>
+                                            <li><a  onclick="switch_categories('refrigerator')">Refrigerators</a></li>
+                                            <li><a  onclick="switch_categories('washing machine')">Washing Machine</a></li>                                   
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="phones.html">Phones</a>
+                                </li>
+                                <li>
+                                    <a href="new_arrival.html">New Arrival</a>
+                                </li>
+                                <li>
+                                    <a href="about_us.html">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                </div>
+            </div>
+        </div>
+        <!--  Banner  -->
+        <div id="banner">
+            <div id="slider" class="row">
+                <div class="slide">
+                    <div class="text">
+                        <div class="container">
+                            <p>
+                                Get flat <span>10%</span> ocashback
+                            </p>
+                            <h2>
+                                Exciting Deals On<br> Televisions 
+                            </h2>
+                            <a href="slider1.html"><button>SHOP NOW</button></a>
+                        </div>  
+                    </div>
+                    <div class="image">
+                        <img class="w-100"  src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner1.png" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="text">
+                        <div class="container">
+                            <p>
+                                Top <span>Brands</span> Lowest <span>Prices</span>
+                                <h2>
+                                    Wide Range of Mobile <br> Phones!
+                                </h2>
+                            </p>
+                            <a href="slider2.html"><button>SHOP NOW</button></a>
+                        </div>  
+                    </div>
+                    <div class="image">
+                        <img class="w-100" src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner2.png" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="text">
+                        <div class="container">
+                            <p>
+                                Get upto <span>25%</span> off
+                            </p>
+                            <h2>
+                                Smart Watches New<br> Collection! 
+                            </h2>
+                            <a href="slider3.html"><button>SHOP NOW</button></a>
+                        </div>  
+                    </div>
+                    <div class="image">
+                        <img class="w-100" src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner4.png" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="text">
+                        <div class="container">
+                            <p>
+                                Top <span>Sale</span> Best <span>Deals</span>
+                            </p>
+                            <h2>
+                                Fresh, Healthy Air<br> Everywhere! 
+                            </h2>
+                            <a href="slider4.html">
+                                <button>SHOP NOW</button>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="image">
+                        <img class="w-100" src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Content  -->
+        <div id="content">
+            <div class="container">
+                <h2>Our <span>New Products</span></h2>
+                <div class="row">
+                    <aside id="sidebar">
+                        <div class="column">
+                            <div class="widget">
+                                <h3>Customer Review</h3>
+                                <ul>
+                                        <li>
+                                            <a onclick="get_by_rating(5)">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>5.0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="get_by_rating(4.5)">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                                <span>4.5</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="get_by_rating(4)">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>4.0</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="get_by_rating(3.5)">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half"></i>
+                                                <span>3.5</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="get_by_rating(3)">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>3.0</span>
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="widget" id="price">
+                                <h3>PRICE</h3>
+                                <ul>
+                                    <p>
+                                    <li><a onclick="get_by_price(0,5000)">Under ₹5,000</a></li>
+                                    <li><a onclick="get_by_price(5000,10000)">₹5,000 - ₹10,000</a></li>
+                                    <li><a onclick="get_by_price(10000,20000)">₹10,000 - ₹20,000</a></li>
+                                    <li><a onclick="get_by_price(20000,35000)">₹20,000 - ₹35,000</a></li>
+                                    <li><a onclick="get_by_price(35000,50000)">₹35,000 - ₹50,000</a></li>
+                                    <li><a onclick="get_by_price(50000,999999)">Over ₹50,000</a></li>
+                                    </p>
+                                </ul>
+                            </div>
+                            <div class="widget_slider">
+                                <h3>Best Sellers</h3>
+                                <br>
+                                <div class="oh">
+                                    <div class="sliderv">
+                                        <div class="column" id="column-overflow">
+                                            <div class="slidev">
+                                                <a onclick="view_products0()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs0">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts0">
+                                                            <br> <br>
+                                                        </div>
+                                                        <br>
+                                                        <span id="prices0"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products1()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs1">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts1">
+                                                            <br> <br>
+                                                        </div>
+                                                        <span id="prices1"> </span>
+                                                    </div>
+                                                    
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products2()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs2">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts2">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices2"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products3()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs3">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts3">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices3"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products4()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs4">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts4">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices4"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products5()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs5">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts5">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices5"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products6()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs6">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts6">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices6"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products7()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs7">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts7">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices7"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products8()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs8">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts8">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices8"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products9()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs9">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts9">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices9"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products10()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs10">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts10">
+                                                            <br> <br>
+                                                        </div>
+                                                        <br>
+                                                        <span id="prices10"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products11()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs11">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts11">
+                                                            <br> <br>
+                                                        </div>
+                                                        <span id="prices11"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products12()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs12">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts12">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices12"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products13()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs13">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts13">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices13"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products14()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs14">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts14">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices14"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products15()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs15">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts15">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices15"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products16()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs16">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts16">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices16"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products17()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs17">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts17">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices17"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products18()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs18">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts18">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices18"> </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slidev">
+                                                <a onclick="view_products19()" class="row">
+                                                    <div class="imagev">
+                                                        <img src="" alt="" id="imgs19">
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="textv" id="texts19">
+
+                                                            <br> <br>
+    
+                                                        </div>
+                                                        <span id="prices19"> </span>
+                                                    </div>
+                                                </a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <main id="main">
+                        <div class="section row justify-between">
+                            <div class="col-1 col">
+                                <div class="card">
+                                    <div class="image row justify-center oh">
+                                        <img id="img0" src="" alt="">
+                                        <div class="view">
+                                            <button onclick="view_product0()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product0()" id="name0" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price0">
+
+                                            </b>
+                                            <span class="text-muted" id="pricem0"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img1" alt="">
+                                        <div class="view">
+                                            <button onclick="view_product1()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product1()" id="name1" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price1">
+
+                                            </b>
+                                            <span class="text-muted" id="pricem1"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                    <div class="new pink">
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img2" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product2()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product2()" id="name2" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price2">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem2"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                    <div class="new yellow">
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section row justify-between">
+                            <div class="col-1 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img3" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product3()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product3()" id="name3" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price3">
+
+                                            </b>
+                                            <span class="text-muted" id="pricem3"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                    <div class="new pink">
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img4" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product4()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product4()" id="name4">
+
+                                        </a>
+                                        <p>
+                                            <b id="price4">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem4"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img5" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product5()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product5()" id="name5" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price5">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem5"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section row justify-between">
+                            <div class="col-1 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img6" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product6()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product6()" id="name6" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price6">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem6"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                    <div class="new pink">
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" id="img7" alt="">
+                                        <div class="view">
+                                            <button  onclick="view_product7()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product7()" id="name7" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price7">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem7"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col">
+                                <div class="card">
+                                    <div class="image row justify-center">
+                                        <img src="" alt="" id="img8">
+                                        <div class="view">
+                                            <button  onclick="view_product8()">Quick View</button>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <a  onclick="view_product8()" id="name8" class="oc">
+
+                                        </a>
+                                        <p>
+                                            <b id="price8">
+
+
+                                            </b>
+                                            <span class="text-muted" id="pricem8"></span>
+                                        </p>
+                                        <a href="/login.html"><button>ADD TO CART</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination row justify-around">
+                            <button class="our_button" id="prev" onclick="prev()"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <span class="row align-center" id="page"><span id="a"></span> - <span
+                                    id="b"></span><span class="page">out of</span><span id="total"></span></span>
+                            <button class="our_button" id="next" onclick="next()">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div id="extra" class="row justify-center">
+                   <div class="column-1 row">
+                        <div class="txt">
+                            <br>
+                            <span>New Collections, New Trendy</span>
+                            <br>
+                            <p>Smart Watches</p> 
+                            <br>   
+                            <span>Sale Upto 25% off in all store</span>
+                        </div>
+                        <div class="img">
+                            <img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/off1.png" alt="">
+                        </div>
+                   </div> 
+                   <div class="column-2 row">
+                    <div class="txt">
+                        <br>
+                        <span>Top Brands, Lowest Prices</span>
+                        <br>
+                        <p>Smart Phones</p>    
+                        <br>
+                        <span>Free shipping order over ₹1000</span>
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/off2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="electronics">
+                    <h3>
+                        Electronics :
+                    </h3>
+                    <p>
+                        If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.
+                    </p>
+                    <div class="features row justify-around">
+                        <div class="feature row">
+                            <i class="fas fa-dolly fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Free Shipping
+                                </h4>
+                                <span>
+                                    on orders over ₹1000
+                                </span>
+                            </div>
+                        </div>
+                        <div class="feature row">
+                            <i class="fas fa-shipping-fast fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Fast Delivery
+                                </h4>
+                                <span>
+                                    World Wide
+                                </span>
+                            </div>
+                        </div>
+                        <div class="feature row">
+                            <i class="far fa-thumbs-up fa-2x"></i>
+                            <div class="text">
+                                <h4>
+                                    Big Choice
+                                </h4>
+                                <span>
+                                    on Products
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="usefull">
+                        <div class="usefull row justify-between">
+                            <div class="links categories">
+                                <div class="column">
+                                    <h3>Categories</h3>
+                                    <a onclick="phone()">Mobiles</a>
+                                    <a onclick="computer_accessories()">Computers</a>
+                                    <a onclick="television()">Tv, Audio</a>
+                                    <a onclick="camera()">Cameras</a>
+                                    <a onclick="game()">Game Zone</a>
+                                    <a onclick="refrigerator()">Refrigerators</a>
+                                </div>
+                            </div>
+                            <div class="links quicklinks">
+                                <div class="column">
+                                    <h3>Quick Links</h3>
+                                    <a href="about_us.html">About Us</a>
+                                    <a href="about_us.html">Contact Us</a>
+                                    <a href="">Help</a>
+                                    <a href="">Faqs</a>
+                                    <a href="">Terms of Use</a>
+                                    <a href="">Privacy Policy</a>
+                                </div>
+                            </div>
+                            <div class="links getintouch">
+                                <div class="column">
+                                    <h3>Get in Touch</h3>
+                                    <a href="https://goo.gl/maps/cb6tW317gJGVn3gM9">
+                                        <i class="fas fa-map-marker"></i>
+                                        <span>Delhi, India</span>
+                                    </a>
+                                    <a >
+                                        <i class="fas fa-mobile"></i>
+                                        <span>12 2345 6790</span>
+                                    </a>
+                                    <a >
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>+11 3672 1890</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <span>electronicsmartapi@gmail.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="newsletter">
+                                <div class="column">
+                                    <h3>News Letter</h3>
+                                    <a >
+                                        <span>Free Delivery on your first order!</span>
+                                    </a>
+                                    <div class="row email">
+                                        <input id="email_news" type="email" placeholder="Email">
+                                        <div class="send">
+                                            <a onclick="send_news()">
+                                                <i class="fab fa-telegram-plane fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="follow">
+                                        <span>Follow Us on</span>
+                                        <div class="row">
+                                            <a href="https://www.facebook.com/login.php" class="facebook icon dblue">
+                                                <i class="fab fa-facebook-square fa-lg"></i>
+                                            </a>
+                                            <a href="https://twitter.com/?lang=en-in" class="twitter icon lblue">
+                                                <i class="fab fa-twitter fa-lg"></i>
+                                            </a>
+                                            <a href="https://mail.google.com" class="google icon red">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="container">
+                    <div class="applainces">
+                        
+                        <div class="mobile applaince">
+                            <h3>
+                                Payment Methods
+                            </h3>
+                            <div class="text">
+                                <ul class="row">
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay2.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay5.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay1.png" alt=""></li>
+                                    <li><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay4.png" alt=""></li>
+                                    <li class="remove4"><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay6.png" alt=""></li>
+                                    <li class="remove3"><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay3.png" alt=""></li>
+                                    <li class="remove2"><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay7.png" alt=""></li>
+                                    <li class="remove"><img src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/pay8.png" alt=""></li>
+                                </ul>
+                            </div>
+                    </div>
+                
+            </div>
+        </div>    
+        <!--  Footer  -->
+        <footer>
+            <div class="row justify-center" id="footer">
+                <p>© 2022 Electronics Mart. All rights reserved | Design by </p> <br> <div> <a href="https://www.linkedin.com/in/mohit-malik-b433311ba/">Mohit&nbsp</a><a href="https://www.linkedin.com/in/namit-k-a94373123/">Namit&nbsp</a><a href="https://www.linkedin.com/in/manish-343586166/">Manish&nbsp</a><a href="https://www.linkedin.com/in/radhika-mongia-a892ba1a0">Radhika&nbsp</a> </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        isHome = true;
+        categories = ["Television","Heater","Headphone","Tablet","SmartWatch","AC","Power Bank","FootBall","Laptop","Sports Shoes","Cricket","Home Theatre","EarPhones","VolleyBall","Game Zone","smart home","Phone","Cycling","console","computer","Refrigerator","Gym","Phone Cover","Badminton","Camera","Washing Machine"];
+    </script>
+    <script src="./assets/javascripts/main.js"></script>
+</body>
+</html>

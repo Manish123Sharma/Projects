@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/stylesheets/login_register.css">
+    <script src="./assets/javascripts/register.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<div class="form">
+			<h1>Register</h1>
+            <hr>
+            <input id="name" type="text" placeholder="Name" required />
+			<input id="email" type="email" placeholder="Email" required />
+			<input id="pwd" type="password" placeholder="Password" required />
+            <input id="confirm_pwd" type="password" placeholder="Confirm Password" required />
+            <hr>
+			<button onclick="register_part_1()">Next</button>
+        </div>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>If you are an existing user then login here</p>
+				<button class="ghost" id="signUp" onclick="login()">Login</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</footer>
+</body>
+</html>

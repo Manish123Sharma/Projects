@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/stylesheets/login_register.css">
+    <title>Document</title>
+</head>
+<body>
+	<h2 id="main_heading">To Continue Further, You must enter OTP.</h2>
+	<br>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<div class="form">
+			<h1 id="login">Enter OTP</h1>
+			<input id="otp" type="number" placeholder="" required />
+			<a onclick="redirect_login()">Didn't recieved OTP?</a>
+			<button onclick="verify_otp()">Verify OTP</button>
+        </div>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Because you have activated our additional security feature you have to enter otp sent to your email-id</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	
+</footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/javascripts/verify_otp.js"></script>
+</body>
+</html>
