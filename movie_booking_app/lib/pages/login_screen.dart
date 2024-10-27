@@ -20,6 +20,10 @@ class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final forgotEmailController = TextEditingController();
+
+  // final AuthController authController = Get.put(AuthController());
+
+
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
@@ -141,6 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 confirm: ElevatedButton(
                                   onPressed: () {
                                     AuthController.instance.forgorPassword(forgotEmailController.text.trim());
+                                    // authController.forgorPassword(forgotEmailController.text.trim());
                                     forgotEmailController.text = "";
                                     Get.back();
                                   },
@@ -171,6 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ElevatedButton(
                           onPressed: () {
                             AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
+                            // authController.login(emailController.text.trim(), passwordController.text.trim());
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: MyTheme.splash,
