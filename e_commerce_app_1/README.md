@@ -7,7 +7,7 @@ A cross-platform mobile e-commerce application built with **Flutter** and **Fire
 ## Table of Contents
 
 - [Features](#features)  
-- [Screenshots / Demo](#screenshots--demo)  
+- [Screenshots](#screenshots)  
 - [Architecture / Tech Stack](#architecture--tech-stack)  
 - [Getting Started](#getting-started)  
   - [Prerequisites](#prerequisites)  
@@ -36,7 +36,7 @@ A cross-platform mobile e-commerce application built with **Flutter** and **Fire
 
 ---
 
-## Screenshots / Demo
+## Screenshots
 
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/ae944f1f-61af-439c-9014-de53d1277dce" />
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/0251c507-7ae7-4a40-8bf9-febaa8354f23" />
