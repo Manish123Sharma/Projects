@@ -38,7 +38,13 @@ A cross-platform mobile e-commerce application built with **Flutter** and **Fire
 
 ## Screenshots / Demo
 
-_Add screenshots or a demo GIF / video here to showcase the app interface._
+<img width="2000" height="2002" alt="image" src="https://github.com/user-attachments/assets/ae944f1f-61af-439c-9014-de53d1277dce" />
+<img width="2000" height="2002" alt="image" src="https://github.com/user-attachments/assets/0251c507-7ae7-4a40-8bf9-febaa8354f23" />
+<img width="2000" height="2002" alt="image" src="https://github.com/user-attachments/assets/c728a942-c363-4ed8-b4a0-9a76d90aad88" />
+<img width="2000" height="2002" alt="image" src="https://github.com/user-attachments/assets/76922b44-10b6-4323-8b9d-d6883d7e582f" />
+<img width="2000" height="2002" alt="image" src="https://github.com/user-attachments/assets/620416cb-443d-458e-b08a-b5405a7685b2" />
+
+
 
 ---
 
